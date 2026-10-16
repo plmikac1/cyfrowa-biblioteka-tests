@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cyfrowa-biblioteka-tests"
+version = "0.1.0"
+description = "Pytest + Playwright tests for Cyfrowa Biblioteka (SUT)"
+authors = [ { name = "plmikac1" } ]
+readme = "README.md"
+requires-python = ">=3.9"
+
+[project.dependencies]
+pytest = ">=7.4.0"
+playwright = ">=1.47.0"
+pytest-playwright = ">=0.5.0"
+pytest-xdist = ">=3.2.0"
+pytest-html = ">=3.2.0"
+requests = ">=2.31.0"
+
+[tool.pytest.ini_options]
+addopts = "-q -n auto --html=report.html"
+testpaths = ["tests"]
